@@ -76,7 +76,6 @@ body {
         text-align: center;
         line-height: 38px;
     }
-
     .welcome__portfolio-btn:hover {
         font-weight: 500;
         box-shadow: 5px 5px 8px rgba(217, 217, 217, 0.25);
@@ -91,9 +90,9 @@ body {
             position: absolute;
             display: block;
 
-            --icon-width: 40px;
-            width: var(--icon-width);
-            left: calc(-5px - var(--icon-width));
+            --arrow-icon-width: 40px;
+            width: var(--arrow-icon-width);
+            left: calc(-5px - var(--arrow-icon-width));
             top: -17px;
             /* width: 10px; */
         }
@@ -113,7 +112,7 @@ body {
         }
     }
 
-    .welcome__keyword-box {
+    .welcome__keywords-box {
         position: absolute;
         /* hide scrooll line, for some reason we see scrooll line despite height: 100vh */
         bottom: 1px;
@@ -122,9 +121,5 @@ body {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-
-        .welcome__keyword_item {
-            /* margin: 0 auto; */
-        }
     }
 }
