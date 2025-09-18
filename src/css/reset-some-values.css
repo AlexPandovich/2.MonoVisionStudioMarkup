@@ -1,6 +1,6 @@
-/* :root {
+:root {
     line-height: 1.5;
-} */
+}
 
 h1,
 h2,
@@ -29,17 +29,7 @@ h5 {
     font-weight: inherit;
 }
 
-/* img {
+img {
     display: block;
     max-inline-size: 100%;
-} */
-
-* {
-    margin: 0;
-    padding: 0;
-
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal; /*400*/
-    font-style: normal;
 }

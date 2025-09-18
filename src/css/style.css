@@ -1,2 +1,130 @@
 @import "./modern-normalize.css";
 @import "./reset-some-values.css";
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal; /*400*/
+    font-style: normal;
+}
+
+html,
+body {
+    --light: #f5f5f7;
+    --dark: #221f20;
+
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.container {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.welcome {
+    height: 100vh;
+    background-color: black;
+    color: var(--light);
+    position: relative;
+    z-index: 0;
+
+    .welcome__bckg-img {
+        position: absolute;
+        right: 211px;
+        top: -74px;
+        z-index: 1;
+    }
+
+    .container {
+        z-index: 2;
+        height: inherit;
+        position: relative;
+    }
+
+    .welcome__header {
+        /* color: inherit; */
+        background-color: inherit;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    .welcome_subheader {
+        background-color: inherit;
+
+        margin-top: 124px;
+
+        font-size: 32px;
+        font-weight: 100;
+    }
+
+    .welcome__portfolio-btn,
+    .welcome__portfolio-btn:visited {
+        margin-top: 20px;
+        display: block;
+        width: 160px;
+        height: 38px;
+
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 100;
+        border: 1px solid var(--light);
+        /* center text in button */
+        text-align: center;
+        line-height: 38px;
+    }
+
+    .welcome__portfolio-btn:hover {
+        font-weight: 500;
+        box-shadow: 5px 5px 8px rgba(217, 217, 217, 0.25);
+    }
+
+    .welcome__address-wrapper {
+        margin-top: 100px;
+        font-weight: 100;
+        position: relative;
+
+        .welcome__address-img {
+            position: absolute;
+            display: block;
+
+            --icon-width: 40px;
+            width: var(--icon-width);
+            left: calc(-5px - var(--icon-width));
+            top: -17px;
+            /* width: 10px; */
+        }
+        .welcome__location {
+            font-weight: inherit;
+        }
+        .welcome__address {
+            font-weight: inherit;
+        }
+        .welcome__telephone {
+            font-weight: inherit;
+            text-decoration: none;
+            color: var(--light);
+        }
+        .welcome__telephone:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .welcome__keyword-box {
+        position: absolute;
+        /* hide scrooll line, for some reason we see scrooll line despite height: 100vh */
+        bottom: 1px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .welcome__keyword_item {
+            /* margin: 0 auto; */
+        }
+    }
+}
