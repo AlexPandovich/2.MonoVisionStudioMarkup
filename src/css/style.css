@@ -18,10 +18,24 @@ body {
 
     color: var(--dark);
     background-color: var(--light);
+
+    --container-padding-inline: 13%;
+    --footer_padding-inline: 10%;
+}
+
+body {
+    --display-welcome: block;
+    --display-expectations: block;
+    --display-services: block;
+    --display-works: block;
+    --display-inspiration: block;
+    --display-customers: block;
+    --display-footer: flex; /*flex*/
 }
 
 .container {
-    width: 1420px;
+    /* width: 1420px; */
+    padding: 0 var(--container-padding-inline);
     margin: 0 auto;
 }
 .underline {
@@ -44,18 +58,21 @@ body {
 }
 
 .welcome {
-    /* display: none; */
+    display: var(--display-welcome);
     height: 100vh;
     background-color: black;
     color: var(--light);
     position: relative;
     z-index: 0;
+    --welcome-padding: 75px;
+    padding-top: var(--welcome-padding);
 
     .welcome__bckg-img {
         position: absolute;
         right: 211px;
-        top: -74px;
+        top: 0px;
         z-index: 1;
+        width: 1330px;
     }
 
     .container {
@@ -125,8 +142,10 @@ body {
 
     .welcome__keywords-box {
         position: absolute;
-        /* hide scrooll line, for some reason we see scrooll line despite height: 100vh */
-        bottom: 1px;
+        padding: 0 var(--container-padding-inline);
+        /* width: 1420px; */
+        bottom: var(--welcome-padding);
+        left: 0px;
         width: 100%;
 
         display: flex;
@@ -136,7 +155,7 @@ body {
 }
 
 .expectations {
-    /* display: none; */
+    display: var(--display-expectations);
     padding-top: 80px;
     .expectations__subheader {
         font-style: italic;
@@ -151,7 +170,7 @@ body {
 }
 
 .services {
-    /* display: none; */
+    display: var(--display-services);
     padding-top: 80px;
     .services__header {
         font-style: italic;
@@ -183,7 +202,7 @@ body {
 }
 
 .works {
-    /* display: none; */
+    display: var(--display-works);
     padding-top: 80px;
     text-align: center;
     font-size: 40px;
@@ -205,8 +224,9 @@ body {
         width: 695px;
     }
 }
+
 .inspiration {
-    /* display: none; */
+    display: var(--display-inspiration);
     padding-top: 80px;
     .inspiration__header {
         font-size: 40px;
@@ -233,7 +253,7 @@ body {
 }
 
 .customers {
-    /* display: none; */
+    display: var(--display-customers);
     padding: 80px 0 100px 0;
 
     .customers__header {
@@ -251,13 +271,14 @@ body {
         column-gap: 30px;
     }
 }
+
 .footer {
-    /* display: none; */
+    display: var(--display-footer);
     background-color: #000;
     color: var(--light);
     height: 200px;
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 var(--footer_padding-inline);
 
     .footer--centered {
         display: grid;
