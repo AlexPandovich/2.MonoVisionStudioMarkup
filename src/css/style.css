@@ -82,15 +82,11 @@ body {
     }
 
     .welcome__header {
-        /* color: inherit; */
-        background-color: inherit;
         font-size: 60px;
         text-transform: uppercase;
     }
 
     .welcome_subheader {
-        background-color: inherit;
-
         margin-top: 124px;
 
         font-size: 32px;
