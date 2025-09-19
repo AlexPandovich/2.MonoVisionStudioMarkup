@@ -24,8 +24,17 @@ body {
     width: 1420px;
     margin: 0 auto;
 }
+.underline {
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    background-color: black;
 
+    top: 48px;
+    left: 725px;
+}
 .welcome {
+    display: none;
     height: 100vh;
     background-color: black;
     color: var(--light);
@@ -121,5 +130,117 @@ body {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+    }
+}
+
+.expectations {
+    padding-top: 80px;
+    .expectations__subheader {
+        font-style: italic;
+        font-size: 12px;
+    }
+    .expectations__text {
+        font-size: 40px;
+        span {
+            color: #a5a5a5;
+        }
+    }
+}
+
+.services {
+    padding-top: 80px;
+    .services__header {
+        font-style: italic;
+    }
+    .services__container {
+        margin-top: 20px;
+    }
+    .services__item {
+        position: relative;
+    }
+    .services__img {
+        --services-img-width: 15px;
+        width: var(--services-img-width);
+        left: calc(-15px - var(--services-img-width));
+
+        top: 4px;
+        position: absolute;
+    }
+    .container {
+        display: flex;
+    }
+    .services__wrapper {
+        width: 695px;
+    }
+    .services__description {
+        width: 695px;
+        font-size: 20px;
+    }
+}
+
+.works {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 40px;
+    .works__header {
+        position: relative;
+        .underline {
+            left: 725px;
+            top: 48px;
+        }
+    }
+    .works__img-container {
+        margin-top: 53px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 30px;
+    }
+    .works__img {
+        width: 695px;
+    }
+}
+.inspiration {
+    padding-top: 80px;
+    .inspiration__header {
+        font-size: 40px;
+        text-align: center;
+        position: relative;
+        .underline {
+            left: 760px;
+            top: 48px;
+        }
+    }
+    .inspiration__img_container {
+        margin-top: 53px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 30px;
+    }
+    .inspiration__img--two-rows {
+        grid-row: span 2;
+    }
+    .nspiration__img--two-cols {
+        grid-column: span 2;
+    }
+}
+
+.customers {
+    padding: 80px 0 100px 0;
+
+    .customers__header {
+        font-size: 40px;
+        text-align: center;
+        position: relative;
+        .underline {
+            left: 763px;
+        }
+    }
+    .customers__img-container {
+        margin-top: 53px;
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 30px;
     }
 }
