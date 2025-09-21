@@ -36,8 +36,8 @@ body {
 .container {
     /* width: 1420px; */
     padding: 0 var(--container-padding-inline);
-    margin: 0 auto;
 }
+
 .underline {
     position: absolute;
     width: 75px;
@@ -218,7 +218,7 @@ body {
             top: 48px;
         }
     }
-    .works__img-container {
+    .works__img-grid {
         margin-top: 53px;
         display: grid;
         grid-template-columns: 1fr 1fr;
