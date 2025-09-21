@@ -222,7 +222,7 @@ body {
         margin-top: 53px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 50px 30px;
+        gap: 2.6vw 1.56vw;
         overflow: hidden;
     }
 
@@ -250,7 +250,7 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
-        gap: 30px;
+        gap: 1.56vw;
     }
     .inspiration__img--two-rows {
         grid-row: span 2;
@@ -274,9 +274,11 @@ body {
     }
     .customers__img-container {
         margin-top: 53px;
-        display: flex;
-        justify-content: flex-start;
-        column-gap: 30px;
+        /* display: flex;
+        justify-content: flex-start; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1.56vw;
     }
 }
 
@@ -295,7 +297,7 @@ body {
 
     .footer__social-container {
         display: flex;
-        gap: 40px;
+        gap: 2.08vw;
         .footer__img-wrapper {
             width: 32px;
             height: 32px;
