@@ -183,6 +183,7 @@ body {
     }
     .services__item {
         position: relative;
+        list-style-type: none;
     }
     .services__img {
         --services-img-width: 15px;
