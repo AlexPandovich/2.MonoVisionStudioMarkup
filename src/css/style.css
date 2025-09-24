@@ -117,13 +117,11 @@ body {
             width: var(--arrow-icon-width);
             height: 49px;
             position: absolute;
-            background-image: url("../icons/Arrow.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
+            background: url("../icons/Arrow.svg") no-repeat center / contain;
 
             width: var(--arrow-icon-width);
             left: calc(-5px - var(--arrow-icon-width));
-            top: -8px;
+            top: -12px;
         }
 
         .welcome__location {
