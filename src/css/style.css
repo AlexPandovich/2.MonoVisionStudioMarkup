@@ -110,20 +110,26 @@ body {
         margin-top: 100px;
         font-weight: 300;
         position: relative;
-
-        .welcome__address-img {
-            position: absolute;
-            display: block;
-
+        &::before {
             --arrow-icon-width: 40px;
+
+            content: "";
+            width: var(--arrow-icon-width);
+            height: 49px;
+            position: absolute;
+            background-image: url("../icons/Arrow.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+
             width: var(--arrow-icon-width);
             left: calc(-5px - var(--arrow-icon-width));
-            top: -17px;
-            /* width: 10px; */
+            top: -8px;
         }
+
         .welcome__location {
             font-weight: inherit;
         }
+
         .welcome__address {
             font-weight: inherit;
         }
