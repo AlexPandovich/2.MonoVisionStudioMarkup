@@ -189,6 +189,7 @@ body {
 
         top: 4px;
         position: absolute;
+        object-fit: cover;
     }
     .container {
         display: flex;
