@@ -312,10 +312,11 @@ body {
 
 .footer {
     display: var(--display-footer);
+    justify-content: space-between;
+
     background-color: #000;
     color: var(--light);
     height: 200px;
-    justify-content: space-between;
     padding: 0 var(--footer_padding-inline);
 
     .footer--centered {
@@ -326,7 +327,7 @@ body {
     .footer__social-container {
         display: flex;
         gap: 2.08vw;
-        .footer__img-wrapper {
+        .footer__img-link {
             width: 32px;
             height: 32px;
             border: 1px solid var(--light);
@@ -337,6 +338,10 @@ body {
                 width: 22px;
                 height: 22px;
             }
+        }
+        .footer__img-link:hover {
+            box-shadow: 3px 3px 3px 0px rgba(255, 255, 255, 0.62);
+            transition: all 0.3s ease-out;
         }
     }
     .footer__address {
