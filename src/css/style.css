@@ -24,7 +24,7 @@
     --display-works: block;
     --display-inspiration: block;
     --display-customers: block;
-    --display-footer: none; /*flex*/
+    --display-footer: flex; /*flex*/
 
     @media screen and (max-width: 768px) {
         --container-padding-inline: 6%;
@@ -535,6 +535,7 @@ body {
     color: var(--light);
     height: 200px;
     padding: 0 var(--footer_padding-inline);
+    font-size: 20px;
 
     .footer--centered {
         display: grid;
@@ -568,5 +569,25 @@ body {
     .telephone {
         display: grid;
         place-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 35px var(--footer_padding-inline);
+    }
+    @media screen and (max-width: 500px) {
+        align-items: center;
+        .footer--centered {
+            order: 0;
+        }
+        .telephone {
+            order: 1;
+        }
+        .footer__address {
+            order: 2;
+        }
     }
 }
