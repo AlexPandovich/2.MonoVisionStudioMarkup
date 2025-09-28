@@ -19,12 +19,17 @@
     --footer_padding-inline: 10%;
 
     --display-welcome: block; /*block none*/
-    --display-expectations: block;
-    --display-services: block;
-    --display-works: block;
-    --display-inspiration: block;
-    --display-customers: block;
-    --display-footer: flex; /*flex*/
+    --display-expectations: none;
+    --display-services: none;
+    --display-works: none;
+    --display-inspiration: none;
+    --display-customers: none;
+    --display-footer: none; /*flex*/
+
+    @media screen and (max-width: 768px) {
+        --container-padding-inline: 6%;
+        --footer_padding-inline: 6%;
+    }
 }
 
 html,
@@ -57,13 +62,24 @@ body {
     position: relative;
     z-index: 0;
     padding-top: 75px;
+    overflow: hidden;
 
     .welcome__bckg-img {
         position: absolute;
-        right: 211px;
-        top: 0px;
+        left: 19.74vw;
+        bottom: -11px;
         z-index: 1;
-        width: 1330px;
+        /* width: 1330px; */
+    }
+    .welcome__bckg-tablet-img {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+    .welcome__bckg-mobile-img {
+        display: none;
+        position: absolute;
+        z-index: 1;
     }
 
     .container {
@@ -135,12 +151,13 @@ body {
 
     .welcome__keywords-box {
         position: absolute;
-        padding: 0 var(--container-padding-inline);
+        padding: 0 18.75vw;
         /* padding: 0 360px; */
         /* width: 1420px; */
         bottom: 0;
         left: 0px;
         width: 100%;
+        z-index: 2;
 
         display: flex;
         justify-content: space-around;
@@ -149,6 +166,107 @@ body {
         li {
             font-weight: 100;
             font-size: 10px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            padding: 0 15px;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        .welcome__bckg-img {
+            left: 8vw;
+        }
+        .welcome__keywords-box {
+            padding: 0 12vw;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .welcome__header {
+            font-size: 48px;
+        }
+        .welcome__keywords-box {
+            padding: 0 15px;
+        }
+        .welcome_subheader {
+            margin-top: 80px;
+        }
+        .welcome__address-wrapper {
+            margin-top: 80px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .welcome__header {
+            font-size: 48px;
+        }
+        .welcome_subheader {
+            margin-top: 80px;
+        }
+        .welcome__bckg-img {
+            display: none;
+        }
+        .welcome__bckg-tablet-img {
+            display: block;
+            left: 0;
+            bottom: -0;
+        }
+        .welcome__address-wrapper {
+            margin-top: 80px;
+            font-weight: 100;
+            &::before {
+                display: none;
+            }
+        }
+        .welcome__keywords-box {
+            & li:nth-child(n) {
+                display: none;
+            }
+
+            & li:nth-child(-n + 9) {
+                display: list-item;
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .welcome__header {
+            font-size: 26px;
+        }
+        .welcome_subheader {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        .welcome__address-wrapper {
+            margin-top: 233px;
+        }
+
+        .welcome__portfolio-btn,
+        .welcome__portfolio-btn:visited {
+            min-height: 30px;
+            font-size: 14px;
+        }
+        .welcome__bckg-tablet-img {
+            display: none;
+        }
+        .welcome__bckg-mobile-img {
+            display: block;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .welcome__keywords-box {
+            & li:nth-child(n) {
+                display: none;
+            }
+
+            & li:nth-child(-n + 4) {
+                display: list-item;
+            }
+        }
+        .welcome__address-wrapper {
+            margin-top: 43px;
         }
     }
 }
